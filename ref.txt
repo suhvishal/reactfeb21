@@ -1,0 +1,249 @@
+
+JavaScript 
+    - it is scripting language for web programming 
+    - executes only inside browser                  (note: after 2008, using nodejs we can execute js code outside browser also)
+        - every browser has 'javascript engine' which is resposible to execute js code 
+        -       google chrome  = v8
+                firefox = spider monkey 
+                IE = chakra
+                ...
+                ...
+    - 1997, introduced 
+    - 1997, it was submitted to ECMA for standardization 
+    - since then ECMA, keeps publishing diff specifications, and every browser is supposed to implement those specifications
+    - the implemetation of these specifications is called 'ECMAScript'
+
+    - 1997  = ES1
+    - 1998  = ES2
+    - 1999  = ES3
+    - 2009  = ES5 --- stable 
+
+    - 2015  = ES6 - which introduced a lot of new features 
+
+    - ES6 = specification published by ECMA 
+            (till today not all the browsers have implemented completely except Chrome)
+
+    - ES6 - modern javascript - features 
+
+            - module system 
+            - arrow functions 
+            - let, const keywords 
+            - object destructuring 
+            - spread operators, rest parameters 
+            - promises, async, await 
+
+    - Tools 
+        - transpilers
+            - ex. Babel 
+            - convert the modern js code into legacy code 
+
+        - bundlers
+            - bundle several files together in a single file and compressing 
+            - ex. webpack 
+
+        - package managers
+            - npm - node package manager 
+            - it is used for dependency management  
+
+        - build tools 
+
+        - ...
+
+
+
+React library 
+    - it is a javascript library for building User interface for web-applications 
+    - React library helps to create 'Components'
+
+React DOM library 
+    - it is used to render the component in browser DOM 
+
+     ReactDOM.render(<Product />, document.getElementById('root'))
+
+Component 
+    - it is a main building block of react applications 
+    - a component represents a specific part/patch on the screen 
+    - a component encapsulates the data, logic and view together 
+
+    - a component in react is just a javascript function or a class, which describe the UI
+
+                import React from 'react';
+
+                function Product(){                         //stateless component 
+                    return (
+                        <div class='prod'>
+                            <h1>Samsung S9+</h1>
+                            <p>This is some description of Samsung</p>
+                            <p>Offer : XXXXXXX</p>
+                            <p>Price : XXXX </p>
+                            <button>Buy Now!</button>
+                        </div>
+                    )
+                }
+
+
+
+
+                import React, {Component} from 'react'      /stateful component       
+                class Product extends Component  {
+
+                }
+
+JSX 
+    - javascript xml, it is syntactical sugar for html 
+    - it looks like html
+    - it is used to describe the UI 
+    - jsx code is converted to javascript 
+
+            <div className="xyz"> helloworld </div>                 //jsx code 
+
+            React.createElement('div', {className : 'xyz'}, 'helloworld')      //javascript code 
+
+babel 
+    - converts the jsx code into its equivalent javascript code 
+
+
+    language                library /packages                    framework 
+   
+    JAVA                    standard library                     spring 
+                                +
+                            3rd party libraries 
+
+    C#, VB                    ......                              .net framework
+
+
+    PYTHON                  .....                               django, flask 
+
+
+    JAVASCRIPT               jquery, bootstrap,semanticui        angular, vuejs, emberjs        
+                                   react,
+        |                               |                               |
+        |                               |                               |
+    provide programming         simplifies the tasks               standardize the process
+    capabilities 
+
+
+    JavaScript - ES5 - ECMAScript 
+
+    ES6 - 2015 - ECMAScript 2015 - modern javascript 
+            - introducted new features 
+
+
+    ReactJS - React - REact.JS
+        - a javascript library for building ui for web/mobile 
+
+   
+
+    ReactNative 
+        - it is built on top of React 
+        - it is used for mobile apps - android as well as ios 
+
+
+dependency management tools 
+    - npm 
+    - yarn 
+    - bower 
+    - .....
+
+
+development environment for react 
+    1. download & install NodeJs
+            - NPM - node package manager 
+                - it is installed automatically along with nodejs 
+                - it is dependency management tool
+
+    2. VS Code editor 
+            - any other editor i.e. atom, brackets, nodepad++,              
+
+    3. install 'create-react-app' CLI tool 
+
+                 > npm install -g create-react-app 
+
+    4. download / install 'react developer tool' for google chrome 
+        - it will help in debugging 
+
+    5. install below extensions in VS Code 
+            - prettier 
+            - auto import ES6, JSX 
+            - reactjs code snippets 
+
+
+
+
+        create a react-project 
+        -------------------------
+            - use 'create-react-app' ClI tool 
+
+            > create-react-app   myapp1
+                - create the directory structure 
+                - download required libraries -- react, react-dom, etc.
+                - download required tools -- babel, webpack, webpack-dev-server 
+
+                   
+
+    Directory structure of react project 
+
+        |
+        |->node_modules 
+        |   |->stores all the libraries/packages that we download using npm 
+        |
+        |->public
+        |   |->stores the public files i.e. index.html
+        |
+        |->src 
+        |   |->store all the code that we write 
+        |   |->index.js -->entry point of react application
+        |   |   - index.js file renders the top level / root component created in App.js
+        |   |->app.js
+        |   |->index.css
+
+
+
+
+Component 
+-------------
+    - a component represents a particular patch on the screen 
+    - a component encapsulates the view, data and logic together 
+    - a component in react is just a javacript function or a class 
+        that describes the UI 
+    - in react, we can use JSX to describe the UI 
+        
+        
+        1. stateless component / function component 
+
+                import React from 'react';
+
+                function Product(){
+                        return (
+                            //jsx code 
+                            <div>
+                                <p>This is product</p>
+                            </div>
+                        );
+                }
+
+                <Product />
+
+
+        2. stateful component / class based component 
+
+                import React, {Component} from 'react';
+
+                class Product extends Component {
+
+                        render(){
+                            return (
+                                //jsx code
+                            )
+                        }
+
+                }
+
+
+    JSX
+        - Javasript xml which looks very similar to html 
+        - jsx code is converted to its equivalent javascript code 
+
+            <div> helloworld </div>         //jsx code 
+
+            React.createElement('div', null, 'helloworld' )
