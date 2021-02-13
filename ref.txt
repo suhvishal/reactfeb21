@@ -247,3 +247,15 @@ Component
             <div> helloworld </div>         //jsx code 
 
             React.createElement('div', null, 'helloworld' )
+
+
+
+
+
+                    App 
+                    |
+        -----------------------------------------
+        Header              Navbar              ProductList 
+                                                    |
+                                    ---------------------------------
+                                    Product     Product     Product
