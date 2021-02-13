@@ -211,6 +211,11 @@ Component
         
         1. stateless component / function component 
 
+                - presentational purpose 
+                - don't have sate in functional component 
+
+                -** after v 16.3, using the concept of 'hooks' we can also have state in function component 
+
                 import React from 'react';
 
                 function Product(){
@@ -227,9 +232,20 @@ Component
 
         2. stateful component / class based component 
 
+                - it has a special property called 'state' 
+                - a class based component can have state where we can store some data/information 
+                        which eventually change 
+                --the state eventually change, and if the state changes - the component is re-rendered 
+
+                -- a class based component has life cycle methods 
+
                 import React, {Component} from 'react';
 
-                class Product extends Component {
+                class ProductList extends Component {
+
+                        state = {
+
+                        }
 
                         render(){
                             return (
@@ -259,3 +275,83 @@ Component
                                                     |
                                     ---------------------------------
                                     Product     Product     Product
+
+
+
+        props 
+
+
+        state 
+            - a state is a javascript object, that represents some data within the component 
+            - whenever the state changes, the component is re-rendered 
+            - using 'setState()' method we can update the state 
+
+
+                window 
+                    |
+    ---------------------------------------------------
+    history         location            document        ....
+                                            |
+                                            |
+                                        htmlElement 
+                                            |
+                            --------------------------------
+                            body                        head
+
+
+
+
+
+    javascript function 
+    --------------------------
+        - the functions are 1st class objects 
+        - in js functions can be...
+            - stored as value in a varialbe 
+            - passed as an argument to a function -i.e. callback 
+            - can returned from a function 
+
+
+
+    Array manipulation methods / functions
+    -----------------------------------------
+
+    1. forEach(callback) function 
+            - forEach() has a callback as argument which executes for each element in the array 
+            - forEech() is used to iterate over each element in the array 
+
+            const namesArr = ['Vishal','Abhishek','Vaibhab','Pooja']
+
+            namesArr.forEach(function(item, index){
+                console.log(index, item)
+            })
+
+            namesArr.forEach((item, index) => console.log(index, item))
+
+    2. map(callback) fuction 
+
+        - the callback is executed for each element in the array, 
+        - the map() returns a new array containing the value returned by the callback function 
+        - used to return a new array containing the processed elements 
+
+         const namesArr = ['Vishal','Abhishek','Vaibhab','Pooja']
+
+         const newArr = namesArr.map((name)=>{
+             return name.toUpperCase()
+         })
+
+
+    3. filter() function 
+
+    4. find() function 
+
+    5. findIndex() function 
+
+    6. sort() 
+
+    7. push() 
+
+    8. pop() 
+
+    9. shift() 
+
+    10. unshift()
