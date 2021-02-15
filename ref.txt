@@ -340,7 +340,20 @@ Component
          })
 
 
-    3. filter() function 
+    3. filter(callback) function 
+
+            - executes the callback for each element in the array 
+            - filter() returns a new array containing only the elements for which the callback returns true 
+
+             const namesArr = ['Vishal','Abhishek','Vaibhav', 'rita', 'sita', Pooja']
+
+
+            const newArr = namesArr.filter((item)=>{
+                                if(item.length() >= 5)
+                                    return true;
+                            })
+
+           const newArr = namesArr.filter( item => item.length() >= 5)
 
     4. find() function 
 
@@ -355,3 +368,41 @@ Component
     9. shift() 
 
     10. unshift()
+
+
+
+
+    Object destructuring assignment 
+    ------------------------------------
+        const person = {
+            fname : 'vishal', 
+            lname : 'shah',
+            location : 'pune', 
+            age : 37,
+            email : 'vishal@gmail.com',
+            mobile : '993993939393'
+            //....
+        }
+
+        let fname = person.fname
+        let lname = person.lname
+        let age = person.age
+
+        let { fname:fn, lname, age } = person;
+
+
+    Array destructuring assignment 
+
+        const arr = [10,21,43,45,65, 89,56,3,87]
+
+        let a = arr[0]
+        let b = arr[1]
+        let c = arr[2]
+        let d =  ...
+        let e = 
+
+        let [a,b,c,d,e] = arr;
+
+
+
+
