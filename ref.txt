@@ -404,5 +404,36 @@ Component
         let [a,b,c,d,e] = arr;
 
 
+   ES6 Module System 
+    ------------------
 
+            1. named exports 
+                    - we can have any number of named exports in a file 
+                    - they should be imported using the same name & inside curly brackets 
+    
+                        file1.js
+                        -----------
+                        export function sayHello(){
+
+                        }
+
+                        file2.js
+                        ----------
+                        import {sayHello} from 'file1.js'
+
+            2. default exports 
+                    - we can have only 1 default export per file/module 
+                    - default exported items can be imported with any name 
+
+
+                    -  function sayHello(){
+
+                        }
+                        default export sayHello()
+
+
+** diff module systems are available js developers 
+     - systemjs module system 
+     - nodejs module system 
+     - es6 module system 
 
